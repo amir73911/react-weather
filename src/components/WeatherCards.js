@@ -17,7 +17,7 @@ class WeatherCards extends Component {
       navigator.geolocation.getCurrentPosition(location => {
         let lat = location.coords.latitude;
         let lon = location.coords.longitude;
-        let openweathermapApiUrl = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=${count}&units=metric&appid=${openweathermapApiKey}`;
+        let openweathermapApiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=${count}&units=metric&appid=${openweathermapApiKey}`;
 
         axios.get(openweathermapApiUrl)
           .then(res => {
